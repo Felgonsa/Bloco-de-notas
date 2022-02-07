@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloco de notas</title>
+    <link rel="stylesheet" href="./Css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 class="h1">Suas tarefas </h1>
+        <div class="caixa">
+            <input type="text" id="input" class="input" placeholder="Qual sua tarefa?">
+            <input type="button" id="add" class="button" value="Add" onclick="addTask()">
+            <input type="button" id="clear" class="button" value="Clear" onclick="clearTask()">
+        </div>
+        <ul id="list"> </ul>
+
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
