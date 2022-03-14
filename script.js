@@ -2,6 +2,8 @@ let list = document.getElementById("list");
 let input = document.getElementById("input");
 let btn = document.createElement("button");
 let lista_de_tarefas = [];
+
+
 let addTask = function() {
     if (input.value != "") {
         let modelo_de_tarefa = { id: Math.random(), conteudo: input.value };
@@ -16,6 +18,7 @@ let addTask = function() {
 
         return (input.value = "")
     } else {
+
         alert("o campo não pode estar vazio!!");
     }
 };
@@ -46,9 +49,10 @@ let removeTask = function(id) {
     location.reload();
 };
 
-let clearTask = function() {
-    list.innerHTML = "";
-    localStorage.getItem("listSaved", JSON.stringify(lista_de_tarefas));
+let clearTask =
+    function() {
+        list.innerHTML = "";
+        localStorage.clear("listSaved", JSON.stringify(lista_de_tarefas));
 
-    alert("Todas tarefas foram excluidas")
-};
+        alert("Todas tarefas foram excluidas")
+    }
